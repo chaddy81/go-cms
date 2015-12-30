@@ -23,8 +23,8 @@ func main() {
 
   router := gin.Default()
 
-  router.POST("/users/new", handleNewUsers)
-  router.POST("/posts/new", handleNewPosts)
+  router.POST("/users", handleNewUsers)
+  router.POST("/posts", handleNewPosts)
   router.GET("/posts", handlePosts)
   router.GET("/posts/:id", handleSinglePost)
   router.PATCH("/posts/:id", handleUpdatePost)
