@@ -1,13 +1,72 @@
 <!doctype html>
 <html>
+
 <head>
+  <style type="text/css">
+  h2 {
+    text-align: center;
+  }
+  
+  form {
+    margin: 0 auto;
+    width: 300px;
+  }
+  
+  label {
+    display: block;
+    line-height: 1.5;
+  }
+  
+  input,
+  textarea {
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 2;
+    padding: 0 5px;
+    width: 100%;
+  }
+  
+  [type=file] {
+    line-height: normal;
+  }
+  
+  button[type=submit] {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 2;
+    padding: 6px 12px;
+    width: 100%;
+  }
+  
+  .input-row {
+    margin: 10px;
+  }
+  </style>
 </head>
+
 <body>
-<form action="http://localhost:8080/posts/new" method="POST">
-  <input type="text" name="userid" />
-  <input type="text" name="title" />
-  <textarea name="markdown"></textarea>
-  <input type="submit" />
-</form>
+  <h2>Create Post</h2>
+  <form enctype="multipart/form-data" action="http://localhost:8080/posts/new" method="POST">
+    <div class="input-row">
+      <label>User ID</label>
+      <input type="text" name="userid" />
+    </div>
+    <div class="input-row">
+      <label>Post Title</label>
+      <input type="text" name="title" />
+    </div>
+    <div class="input-row">
+      <label>Post Markdown</label>
+      <textarea name="markdown"></textarea>
+    </div>
+    <div class="input-row">
+      <label>Header Image</label>
+      <input type="file" name="header" placeholder="Upload File" />
+    </div>
+    <div class="input-row">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
 </body>
+
 </html>
