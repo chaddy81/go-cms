@@ -7,5 +7,5 @@ Frontend is Ember (EmberCLI)
 ### Backend
 Backend is Golang
 
-## Database
+### Database
 Currently using sqlite3 but will switch to postgresql.
