@@ -1,9 +1,10 @@
 # go-cms
+A simple CMS for my personal projects that will take advantage of Ember and Golang.
 
-## Frontend
+### Frontend
 Frontend is Ember (EmberCLI)
 
-## Backend
+### Backend
 Backend is Golang
 
 ## Database
